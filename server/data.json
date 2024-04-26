@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Finish coding project",
+    "description": "Complete the development of the e-commerce website for the client.",
+    "priority": "urgent"
+  },
+  {
+    "name": "Prepare for sales meeting",
+    "description": "Review sales data and prepare presentation materials.",
+    "priority": "importance"
+  },
+  {
+    "name": "Respond to customer emails",
+    "description": "Answer customer inquiries and resolve any issues.",
+    "priority": "normal"
+  },
+  {
+    "name": "Update website content",
+    "description": "Add new blog posts and product descriptions.",
+    "priority": "normal"
+  },
+  {
+    "name": "Review marketing campaign",
+    "description": "Analyze campaign performance and make recommendations for improvement.",
+    "priority": "importance"
+  },
+  {
+    "name": "Attend team meeting",
+    "description": "Discuss project progress and upcoming deadlines.",
+    "priority": "normal"
+  },
+  {
+    "name": "Order office supplies",
+    "description": "Replenish stock of paper, pens, and other essentials.",
+    "priority": "normal"
+  },
+  {
+    "name": "Pay bills",
+    "description": "Make monthly payments for utilities, internet, and other expenses.",
+    "priority": "importance"
+  },
+  {
+    "name": "Schedule doctor's appointment",
+    "description": "Get annual checkup and address any health concerns.",
+    "priority": "normal"
+  },
+  {
+    "name": "Plan vacation",
+    "description": "Research destinations, book flights and accommodations.",
+    "priority": "normal"
+  },
+  {
+    "name": "Complete online course",
+    "description": "Learn a new skill or expand knowledge in a particular area.",
+    "priority": "normal"
+  },
+  {
+    "name": "Organize garage",
+    "description": "Declutter and store items neatly.",
+    "priority": "normal"
+  },
+  {
+    "name": "Read a book",
+    "description": "Catch up on a novel or non-fiction work.",
+    "priority": "normal"
+  },
+  {
+    "name": "Exercise regularly",
+    "description": "Maintain physical fitness through workouts or other activities.",
+    "priority": "normal"
+  },
+  {
+    "name": "Learn a new language",
+    "description": "Expand vocabulary and communication skills.",
+    "priority": "normal"
+  },
+  {
+    "name": "Cook a healthy meal",
+    "description": "Prepare a nutritious and balanced dinner.",
+    "priority": "normal"
+  },
+  {
+    "name": "Spend time with family",
+    "description": "Connect with loved ones and create lasting memories.",
+    "priority": "importance"
+  },
+  {
+    "name": "Volunteer in the community",
+    "description": "Contribute time and effort to a cause you care about.",
+    "priority": "importance"
+  },
+  {
+    "name": "Meditate or practice mindfulness",
+    "description": "Reduce stress and improve mental well-being.",
+    "priority": "normal"
+  },
+  {
+    "name": "Get enough sleep",
+    "description": "Rest the body and mind for optimal functioning.",
+    "priority": "importance"
+  },
+  {
+    "name": "Take a break from technology",
+    "description": "Disconnect from devices and engage in offline activities.",
+    "priority": "normal"
+  },
+  {
+    "name": "Set goals for the future",
+    "description": "Plan aspirations and create a roadmap for personal growth.",
+    "priority": "importance"
+  },
+  {
+    "name": "Learn from mistakes",
+    "description": "Reflect on experiences and identify areas for improvement.",
+    "priority": "normal"
+  },
+  {
+    "name": "Practice gratitude",
+    "description": "Appreciate the positive aspects of life and express thankfulness.",
+    "priority": "normal"
+  },
+  {
+    "name": "Help others in need",
+    "description": "Offer assistance and support to those who may be struggling.",
+    "priority": "importance"
+  },
+  {
+    "name": "Forgive yourself and others",
+    "description": "Let go of resentments and promote emotional healing.",
+    "priority": "normal"
+  },
+  {
+    "name": "Live in the present moment",
+    "description": "Focus on the here and now and savor experiences.",
+    "priority": "normal"
+  },
+  {
+    "name": "Embrace challenges",
+    "description": "View obstacles as opportunities for growth and learning.",
+    "priority": "normal"
+  },
+  {
+    "name": "Never stop learning",
+    "description": "Maintain a curious mindset and seek out new knowledge.",
+    "priority": "normal"
+  },
+  {
+    "name": "Be kind to yourself",
+    "description": "Practice self-compassion and treat yourself with respect.",
+    "priority": "importance"
+  },
+  {
+    "name": "Celebrate successes",
+    "description": "Acknowledge accomplishments and reward yourself for achievements.",
+    "priority": "normal"
+  }
+]
