@@ -1,14 +1,19 @@
-import { Image,Header } from "semantic-ui-react";
-import { HeaderContainer, ImageContainer, NameContainer, TextHeader } from "./style";
+import { Image } from "semantic-ui-react";
+import {
+  HeaderContainer,
+  ImageContainer,
+  NameContainer,
+  TextHeader,
+} from "./style";
 
 const Headers = () => {
   return (
-    <HeaderContainer >
+    <HeaderContainer>
       <ImageContainer>
-      <Image src='logoUni.png' size='large'/>
+        <Image src="logoUni.png" size="large" />
       </ImageContainer>
       <NameContainer>
-      <TextHeader>UniqueTechnology Todo</TextHeader>
+        <TextHeader>UniqueTechnology Todo</TextHeader>
       </NameContainer>
     </HeaderContainer>
   );

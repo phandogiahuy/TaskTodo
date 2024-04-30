@@ -21,6 +21,8 @@ const Main = () => {
   const [pagination, setPagination] = useState({
     pageSize: 8,
     page: 1,
+    sort: "",
+    name: "",
   });
   const { data, isLoading } = useGetAllTask(pagination);
   const { mutate } = useDeleteTaskById();
@@ -76,17 +78,45 @@ const Main = () => {
             color="blue"
           />
         </Link>
-        <Table celled fixed>
+        <Table celled fixed sortable>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width={4}>Check</Table.HeaderCell>
               <Table.HeaderCell width={2}>ID</Table.HeaderCell>
               <Table.HeaderCell width={7}>Name</Table.HeaderCell>
               <Table.HeaderCell width={12}>Description</Table.HeaderCell>
-              <Table.HeaderCell textAlign="center" width={7}>
+              <Table.HeaderCell
+                textAlign="center"
+                width={7}
+                sorted={pagination.sort === "DESC" ? "ascending" : "descending"}
+                onClick={() =>
+                  setPagination((item) => {
+                    let sorted = pagination.sort === "DESC" ? "ASC" : "DESC";
+                    return {
+                      ...item,
+                      name: "priority",
+                      sort: sorted,
+                    };
+                  })
+                }
+              >
                 Priority
               </Table.HeaderCell>
-              <Table.HeaderCell textAlign="center" width={5}>
+              <Table.HeaderCell
+                textAlign="center"
+                width={5}
+                sorted={pagination.sort === "DESC" ? "ascending" : "descending"}
+                onClick={() =>
+                  setPagination((item) => {
+                    let sorted = pagination.sort === "DESC" ? "ASC" : "DESC";
+                    return {
+                      ...item,
+                      name: "status",
+                      sort: sorted,
+                    };
+                  })
+                }
+              >
                 Status
               </Table.HeaderCell>
               <Table.HeaderCell textAlign="center" width={3}>
@@ -108,9 +138,15 @@ const Main = () => {
                     />
                   )}
                 </Table.Cell>
-                <Table.Cell>{task._id}</Table.Cell>
-                <Table.Cell>{task.name}</Table.Cell>
-                <Table.Cell>{task.description}</Table.Cell>
+                <Table.Cell disabled={task.status === true}>
+                  {task._id}
+                </Table.Cell>
+                <Table.Cell disabled={task.status === true}>
+                  {task.name}
+                </Table.Cell>
+                <Table.Cell disabled={task.status === true}>
+                  {task.description}
+                </Table.Cell>
                 <Table.Cell textAlign="center">
                   {task.priority === "urgent" ? (
                     <Label as="a" color="brown" size="large">

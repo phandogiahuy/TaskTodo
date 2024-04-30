@@ -12,25 +12,53 @@ export class TaskService {
     private readonly taskRepository: Repository<Task>,
   ) {}
 
-  async findAll(pagination: { pageSize: number; page: number }) {
+  async findAll(
+    pagination: { pageSize: number; page: number },
+    sorts: 'ASC' | 'DESC',
+    name: 'status' | 'priority',
+  ) {
     const { pageSize, page } = pagination;
     const totalTask = await this.taskRepository.count();
     const pageCount = Math.ceil(totalTask / pageSize);
-    const task = await this.taskRepository.find({
-      skip: (page - 1) * pageSize,
-      take: pageSize,
-    });
-    return [
-      task,
-      {
-        pagination: {
-          total: totalTask,
-          pageCount,
-          pageSize: +pageSize,
-          page: +page,
+    // const task = (await this.taskRepository.find())
+    //   .sort((a: Task, b: Task) => b.priority - a.priority)
+    //   .slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    if (name) {
+      const task = await this.taskRepository.find({
+        skip: (page - 1) * pageSize,
+        take: pageSize,
+        order: {
+          [name]: sorts,
         },
-      },
-    ];
+      });
+      return [
+        task,
+        {
+          pagination: {
+            total: totalTask,
+            pageCount,
+            pageSize: +pageSize,
+            page: +page,
+          },
+        },
+      ];
+    } else {
+      const task = await this.taskRepository.find({
+        skip: (page - 1) * pageSize,
+        take: pageSize,
+      });
+      return [
+        task,
+        {
+          pagination: {
+            total: totalTask,
+            pageCount,
+            pageSize: +pageSize,
+            page: +page,
+          },
+        },
+      ];
+    }
   }
 
   async findOne(id: number) {

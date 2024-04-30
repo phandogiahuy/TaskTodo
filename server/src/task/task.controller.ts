@@ -27,8 +27,10 @@ export class TaskController {
   findAll(
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page: number,
     @Query('pageSize', new DefaultValuePipe(8), ParseIntPipe) pageSize: number,
+    @Query('sort', new DefaultValuePipe('')) sorts: 'ASC' | 'DESC',
+    @Query('name', new DefaultValuePipe('')) name: 'status' | 'priority',
   ) {
-    return this.taskService.findAll({ page, pageSize });
+    return this.taskService.findAll({ page, pageSize }, sorts, name);
   }
 
   @Get(':id')
